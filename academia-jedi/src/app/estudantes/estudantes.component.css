@@ -1,0 +1,18 @@
+.estudantes tr:nth-child(odd) {
+    background-color: #FAFAFA;
+    
+ }
+
+ .indice{
+     padding-left: 20px;
+ }
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+
+
+.estudantes {
+  cursor: pointer;
+}

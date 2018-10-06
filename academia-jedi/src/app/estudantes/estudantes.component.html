@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Edição</h2>
+  <h2>Estudantes da Academia Jedi</h2>
   <table class="table">
     <thead>
       <tr>
@@ -9,34 +9,16 @@
         <th>Templo do Estudante</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td><input [(ngModel)]="estudante.id" placeholder="id"/></td>
-        <td><input [(ngModel)]="estudante.nome" placeholder="nome"/></td>
-        <td><input [(ngModel)]="estudante.isJedi" placeholder="é Jedi"/></td>
-        <td><input [(ngModel)]="estudante.templo" placeholder="templo"/></td>
+    <tbody class="estudantes">
+      <tr *ngFor="let estudante of estudantes" (click)="onSelect(estudante)" [class.selected]="estudante === estudanteSelecionado">
+        <td class="indice">{{ estudante.id }}</td>
+        <td>{{ estudante.nome }}</td>
+        <td>{{ estudante.isJedi }}</td> 
+        <td>{{ estudante.templo }}</td>
       </tr>
     </tbody>
   </table>
 
-  <h2>Exibição</h2>
-  <table class="table">
-      <thead>
-        <tr>
-          <th>Id do Estudante</th>
-          <th>Nome do Estudante</th>
-          <th>Estudante é Jedi?</th>
-          <th>Templo do Estudante</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>{{ estudante.id }}</td>
-          <td>{{ estudante.nome }}</td>
-          <td>{{ estudante.isJedi }}</td>
-          <td>{{ estudante.templo }}</td>
-        </tr>
-      </tbody>
-    </table>
-
+  <app-estudante-detalhe [estudante]="estudanteSelecionado"></app-estudante-detalhe>
+    
 </div>
