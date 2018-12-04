@@ -1,0 +1,13 @@
+<h3>Melhores Estudantes</h3>
+<div class="container">
+
+  <div class="row">
+    <div *ngFor="let estudante of estudantes" class="column">
+        <div class="card" >
+          <a routerLink="/detalhe/{{estudante.id}}">
+            {{estudante.nome}}
+          </a>
+        </div>
+      </div>
+  </div>
+</div>

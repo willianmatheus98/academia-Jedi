@@ -1,8 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <ul>
+      <li><a routerLink="/painel">Painel</a></li>
+      <li><a routerLink="/estudantes">Estudantes</a></li>
+    </ul>
+  <h1 class="titulo">
     {{ title }}
   </h1>
-  <app-estudantes></app-estudantes>
+  <router-outlet></router-outlet>
+  <!-- <app-painel></app-painel>
+  <app-estudantes></app-estudantes> -->
 </div>
 

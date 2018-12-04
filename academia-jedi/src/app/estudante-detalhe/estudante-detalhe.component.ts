@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Estudante } from '../estudantes/estudante';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { EstudanteService } from '../estudante.service';
 
 @Component({
   selector: 'app-estudante-detalhe',
@@ -9,9 +12,24 @@ import { Estudante } from '../estudantes/estudante';
 export class EstudanteDetalheComponent implements OnInit {
   
   @Input() estudante: Estudante;
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private estudanteService: EstudanteService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
+    this.getEstudante();
+  }
+
+  getEstudante(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.estudanteService.getEstudante(id)
+      .subscribe(estudante => this.estudante = estudante);
+  }
+
+  voltar(): void {
+    this.location.back();
   }
 
 }

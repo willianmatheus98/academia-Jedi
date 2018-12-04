@@ -1,5 +1,7 @@
-<div *ngIf="estudante" >
+<div class="container">
 
+  <div *ngIf="estudante" >
+    
     <h2>Detalhes {{estudante.nome | uppercase}}</h2>
     <table class="table">
       <thead>
@@ -19,4 +21,7 @@
         </tr>
       </tbody>
     </table>
+    <button (click)="voltar()">Voltar</button>
   </div>
+  
+</div>

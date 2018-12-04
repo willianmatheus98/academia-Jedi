@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody class="estudantes">
-      <tr *ngFor="let estudante of estudantes" (click)="onSelect(estudante)" [class.selected]="estudante === estudanteSelecionado">
+      <tr routerLink="/detalhe/{{estudante.id}}" *ngFor="let estudante of estudantes" (click)="onSelect(estudante)" [class.selected]="estudante === estudanteSelecionado">
         <td class="indice">{{ estudante.id }}</td>
         <td>{{ estudante.nome }}</td>
         <td>{{ estudante.isJedi }}</td> 
