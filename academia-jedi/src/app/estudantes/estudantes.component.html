@@ -1,5 +1,31 @@
 <div class="container">
   <h2>Estudantes da Academia Jedi</h2>
+  <form>
+    <div class="row">
+      <div class="column">
+
+        <label>Nome do Estudante:
+          <input #nome placeholder="Nome" />
+        </label>
+      </div>
+      <div class="column">
+        <label>É Jedi?
+          <input #isJedi placeholder="é Jedi" />
+        </label>
+      </div>
+      <div class="column">
+        <label>Templo:
+          <input #templo placeholder="templo" />
+        </label>
+      </div>
+      <div class="column">
+        <!-- (click) passa o valor do input para adicionar() e depois limpa o input -->
+        <button style="margin-top: 25px;" (click)="adicionar(nome.value, isJedi.value, templo.value); ">
+          Adicionar
+        </button>
+      </div>
+    </div>
+  </form>
   <table class="table">
     <thead>
       <tr>
@@ -7,18 +33,20 @@
         <th>Nome do Estudante</th>
         <th>Estudante é Jedi?</th>
         <th>Templo do Estudante</th>
+        <th>Excluir?</th>
       </tr>
     </thead>
     <tbody class="estudantes">
-      <tr routerLink="/detalhe/{{estudante.id}}" *ngFor="let estudante of estudantes" (click)="onSelect(estudante)" [class.selected]="estudante === estudanteSelecionado">
+      <tr routerLink="/detalhe/{{estudante.id}}" *ngFor="let estudante of estudantes" (click)="onSelect(estudante)"
+        [class.selected]="estudante === estudanteSelecionado">
         <td class="indice">{{ estudante.id }}</td>
         <td>{{ estudante.nome }}</td>
-        <td>{{ estudante.isJedi }}</td> 
+        <td>{{ estudante.isJedi }}</td>
         <td>{{ estudante.templo }}</td>
+        <td><button class="delete" title="Remover Estudante" (click)="remover(estudante)">x</button>
+        </td>
       </tr>
     </tbody>
   </table>
 
-  <app-estudante-detalhe [estudante]="estudanteSelecionado"></app-estudante-detalhe>
-    
 </div>

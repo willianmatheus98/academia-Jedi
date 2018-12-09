@@ -20,8 +20,16 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@kiyasov/noty": "^1.1.3",
+    "angular-in-memory-web-api": "^0.7.0",
     "core-js": "^2.5.4",
+    "emitter": "0.0.5",
+    "jquery": "^3.3.1",
+    "notification-component": "0.0.3",
+    "noty": "^3.2.0-beta",
+    "noty-noty": "0.0.6",
     "rxjs": "~6.2.0",
+    "universal-toast": "^0.6.5",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

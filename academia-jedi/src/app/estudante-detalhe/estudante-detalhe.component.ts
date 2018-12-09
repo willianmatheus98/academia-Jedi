@@ -10,7 +10,7 @@ import { EstudanteService } from '../estudante.service';
   styleUrls: ['./estudante-detalhe.component.css']
 })
 export class EstudanteDetalheComponent implements OnInit {
-  
+
   @Input() estudante: Estudante;
   constructor(
     private route: ActivatedRoute,
@@ -32,4 +32,8 @@ export class EstudanteDetalheComponent implements OnInit {
     this.location.back();
   }
 
+  salvar(): void {
+    this.estudanteService.atualizaEstudante(this.estudante)
+      .subscribe(() => this.voltar());
+  }
 }

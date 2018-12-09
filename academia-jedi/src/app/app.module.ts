@@ -8,13 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { EstudanteDetalheComponent } from './estudante-detalhe/estudante-detalhe.component';
 import { PainelComponent } from './painel/painel.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BuscaEstudanteComponent } from './busca-estudante/busca-estudante.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstudantesComponent,
     EstudanteDetalheComponent,
-    PainelComponent
+    PainelComponent,
+    BuscaEstudanteComponent
   ],
   imports: [
     BrowserModule,

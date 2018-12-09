@@ -1,13 +1,15 @@
-<h3>Melhores Estudantes</h3>
 <div class="container">
 
+  <app-busca-estudante></app-busca-estudante>
+  <h3>Melhores Estudantes</h3>
   <div class="row">
     <div *ngFor="let estudante of estudantes" class="column">
-        <div class="card" >
-          <a routerLink="/detalhe/{{estudante.id}}">
-            {{estudante.nome}}
-          </a>
-        </div>
+      <div class="card">
+        <a routerLink="/detalhe/{{estudante.id}}">
+          {{estudante.nome}}
+        </a>
       </div>
+    </div>
   </div>
+
 </div>

@@ -1,0 +1,38 @@
+/* estilos privados de HeroiBusca */
+.search-result li {
+  border-bottom: 1px solid #9b4dca;
+  border-left: 1px solid #9b4dca;
+  border-right: 1px solid #9b4dca;
+
+  height: 36px;
+  padding: 5px;
+  margin-top: 0;
+  background-color: white;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+
+.search-result li:hover {
+  background-color: #FAFAFA;
+
+}
+
+.search-result li a {
+
+  display: block;
+  text-decoration: none;
+}
+
+#search-box {
+  margin-bottom: 0 !important;
+}
+
+ul.search-result {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.item {
+  margin-bottom: 0 !important;
+}

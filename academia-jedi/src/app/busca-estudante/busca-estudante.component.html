@@ -1,0 +1,11 @@
+<div id="search-component">
+  <h4>Busca de Estudantes</h4>
+  <input #caixaBusca id="search-box" placeholder="Digite o nome de um estudante" (input)="buscar(caixaBusca.value)" />
+  <ul class="search-result">
+    <li routerLink="/detalhe/{{estudante.id}}" class="item" *ngFor="let estudante of estudantes$ | async">
+      <a>
+        {{estudante.nome}}
+      </a>
+    </li>
+  </ul>
+</div>

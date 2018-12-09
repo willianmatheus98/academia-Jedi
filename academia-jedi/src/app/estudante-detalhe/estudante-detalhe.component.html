@@ -1,7 +1,7 @@
 <div class="container">
 
-  <div *ngIf="estudante" >
-    
+  <div *ngIf="estudante">
+
     <h2>Detalhes {{estudante.nome | uppercase}}</h2>
     <table class="table">
       <thead>
@@ -14,14 +14,15 @@
       </thead>
       <tbody>
         <tr>
-          <td><input [(ngModel)]="estudante.id" placeholder="id" /></td>
+          <td><input [(ngModel)]="estudante.id" placeholder="id" disabled="true" /></td>
           <td><input [(ngModel)]="estudante.nome" placeholder="nome" /></td>
           <td><input [(ngModel)]="estudante.isJedi" placeholder="é Jedi" /></td>
           <td><input [(ngModel)]="estudante.templo" placeholder="templo" /></td>
         </tr>
       </tbody>
     </table>
+    <button (click)="salvar()" style="margin:20px;">Salvar</button>
     <button (click)="voltar()">Voltar</button>
   </div>
-  
+
 </div>
